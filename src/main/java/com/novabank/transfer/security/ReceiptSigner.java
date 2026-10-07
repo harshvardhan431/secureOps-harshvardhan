@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class ReceiptSigner {
 
-    private static final String RECEIPT_SIGNING_KEY = "nbk_7Qp2Vx9Lm4Rz8Tc1Hy6Wd3Fs5Gj0KaE";
+    private static final String RECEIPT_SIGNING_KEY=System.getenv("RECEIPT_SIGNING_KEY");
 
     public String sign(String reference, String fromAccount) {
         try {

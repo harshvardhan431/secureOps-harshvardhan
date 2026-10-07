@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class AccountTokenService {
 
-    private static final byte[] TOKEN_KEY = "NovaBankKey12345".getBytes(StandardCharsets.UTF_8);
+    private static final byte[] TOKEN_KEY = System.getenv("TOKEN").getBytes(StandardCharsets.UTF_8);
 
     public String tokenize(String accountNumber) {
         try {
